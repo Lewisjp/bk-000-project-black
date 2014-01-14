@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @scene.title %>
+</p>
+
+<p>
+  <b>Year:</b>
+  <%= @scene.year %>
+</p>
+
+<p>
+  <b>Imdb url:</b>
+  <%= @scene.imdb_url %>
+</p>
+
+<p>
+  <b>Agency credit:</b>
+  <%= @scene.agency_credit %>
+</p>
+
+<p>
+  <b>Artist credit:</b>
+  <%= @scene.artist_credit %>
+</p>
+
+
+<%= link_to 'Edit', edit_scene_path(@scene) %> |
+<%= link_to 'Back', scenes_path %>

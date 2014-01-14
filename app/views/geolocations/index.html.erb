@@ -1,0 +1,31 @@
+<h1>Listing geolocations</h1>
+
+<table>
+  <tr>
+    <th>Address</th>
+    <th>Latitude</th>
+    <th>Longitude</th>
+    <th>Borough</th>
+    <th>Neighborhood</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @geolocations.each do |geolocation| %>
+  <tr>
+    <td><%= geolocation.address %></td>
+    <td><%= geolocation.latitude %></td>
+    <td><%= geolocation.longitude %></td>
+    <td><%= geolocation.borough %></td>
+    <td><%= geolocation.neighborhood %></td>
+    <td><%= link_to 'Show', geolocation %></td>
+    <td><%= link_to 'Edit', edit_geolocation_path(geolocation) %></td>
+    <td><%= link_to 'Destroy', geolocation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Geolocation', new_geolocation_path %>
